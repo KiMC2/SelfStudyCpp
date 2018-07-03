@@ -8,6 +8,6 @@ T Add(T a, T b){
 int main(int argc, char * argv[]){
     std::cout << Add(3, 4) << std::endl;
     std::cout << Add(3.3, 4.4) << std::endl;
-
+    std::cout << Add<int>(5.2, 4.3) << std::endl;
     return 0;
 }
