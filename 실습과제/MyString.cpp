@@ -1,6 +1,5 @@
 #include "MyString.h"
 
-
 CMyString::CMyString()
     : m_pszData(NULL)
     , m_nLength(0)
@@ -13,7 +12,7 @@ CMyString::~CMyString()
     Release();
 }
 
-const char* CMyString::GetString()
+const char* CMyString::GetString() const
 {
     return m_pszData;
 }
