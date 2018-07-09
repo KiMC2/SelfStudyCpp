@@ -5,6 +5,7 @@ class CMyString
 {
 public:
     CMyString();
+    CMyString(const CMyString &rhs);
     ~CMyString();
 
 private:
@@ -15,6 +16,8 @@ private:
     int m_nLength;
     
 public:
+    CMyString& operator=(const CMyString &rhs);
+
     int SetString(const char* pszParam);
     const char* GetString() const;
     void Release();

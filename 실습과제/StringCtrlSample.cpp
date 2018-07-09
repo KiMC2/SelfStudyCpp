@@ -3,17 +3,18 @@
 
 using namespace std;
 
-void TestFunc(const CMyString &param){
-    cout << param.GetString() << endl;
-}
-
 int main(int argc, char *argv[])
 {
-    CMyString strData;
+    CMyString strData, strTest;
     strData.SetString("Hello");
-    cout << strData.GetString() << endl;
-    strData.SetString("Bye");
-    TestFunc(strData);
+    strTest.SetString("World");
+
+    CMyString strNewData(strData);
+    cout << strNewData.GetString() << endl;
+
+    // 단순 대입 연산자 호출
+    strNewData = strTest;
+    cout << strNewData.GetString() << endl;
 
     return 0;
 }

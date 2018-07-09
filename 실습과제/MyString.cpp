@@ -7,6 +7,13 @@ CMyString::CMyString()
 
 }
 
+CMyString::CMyString(const CMyString &rhs)
+    : m_pszData(NULL)
+    , m_nLength(0)
+{
+    this->SetString(rhs.GetString());
+}
+
 CMyString::~CMyString()
 {
     Release();
@@ -15,6 +22,13 @@ CMyString::~CMyString()
 const char* CMyString::GetString() const
 {
     return m_pszData;
+}
+
+CMyString& CMyString::operator=(const CMyString &rhs){
+    if(this != &rhs)
+        this->SetString(rhs.GetString());
+
+    return *this;
 }
 
 void CMyString::Release()
