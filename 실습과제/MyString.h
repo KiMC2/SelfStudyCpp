@@ -18,10 +18,14 @@ private:
     
 public:
     CMyString& operator=(const CMyString &rhs);
+    CMyString operator+(const CMyString &rhs);
+    CMyString& operator+=(const CMyString &rhs);
 
     operator char*(void) const { return m_pszData; }
 
     int SetString(const char* pszParam);
     const char* GetString() const;
+    int GetLength() const;
+    int Append(const char *pszParam);
     void Release();
 };

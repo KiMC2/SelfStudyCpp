@@ -3,17 +3,18 @@
 
 using namespace std;
 
-void TestFunc(const CMyString &strParam)
-{
-    cout << strParam << endl;
-}
-
 int main(int argc, char *argv[])
 {
-    CMyString strData("Hello");
+    CMyString strLeft("Kim");
+    CMyString strRight("Mincheol");
+    CMyString strResult;
 
-    ::TestFunc(strData);
-    ::TestFunc(CMyString("World"));
+    strResult = strLeft + strRight;
+    cout << strResult << endl;
+    cout << strLeft << endl;
+
+    strLeft += CMyString("World");
+    cout << strLeft << endl;
 
     return 0;
 }
