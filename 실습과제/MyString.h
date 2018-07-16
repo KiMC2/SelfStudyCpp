@@ -20,6 +20,8 @@ public:
     CMyString& operator=(const CMyString &rhs);
     CMyString operator+(const CMyString &rhs);
     CMyString& operator+=(const CMyString &rhs);
+    char& operator[](int nIndex);
+    char& operator[](int nIndex) const;
 
     operator char*(void) const { return m_pszData; }
 

@@ -43,6 +43,14 @@ CMyString& CMyString::operator+=(const CMyString &rhs)
     return *this;
 }
 
+char& CMyString::operator[](int nIndex){
+    return m_pszData[nIndex];
+}
+
+char& CMyString::operator[](int nIndex) const{
+    return m_pszData[nIndex];
+}
+
 const char* CMyString::GetString() const
 {
     return m_pszData;
