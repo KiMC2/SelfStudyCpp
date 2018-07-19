@@ -8,6 +8,6 @@ public:
 
     CMyStringEx();
     ~CMyStringEx();
-    int SetString(const char* pszParam);
+    void OnSetString(char *pszData, int nLength);
     int Find(const char *pszParam);
 };

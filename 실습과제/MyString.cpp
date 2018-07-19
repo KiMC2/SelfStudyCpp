@@ -69,6 +69,11 @@ int CMyString::operator!=(const CMyString &rhs){
     return 1;
 }
 
+void CMyString::OnSetString(char *pszData, int nLength)
+{
+    // 아무런 코드가 추가되지 않는다. (하지만 언젠가..)
+}
+
 const char* CMyString::GetString() const
 {
     return m_pszData;
@@ -150,5 +155,7 @@ int CMyString::SetString(const char* pszParam)
     // 동적할당한 메모리에 문자열 저장
     strcpy(m_pszData, pszParam);
 
-    return 0;
+    OnSetString(m_pszData, m_nLength);
+
+    return m_nLength;
 }

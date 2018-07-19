@@ -24,8 +24,9 @@ public:
     char& operator[](int nIndex) const;
     int operator==(const CMyString &rhs);
     int operator!=(const CMyString &rhs);
-
     operator char*(void) const { return m_pszData; }
+
+    virtual void OnSetString(char *pszData, int nLength);
 
     int SetString(const char* pszParam);
     const char* GetString() const;
