@@ -27,6 +27,7 @@ public:
     operator char*(void) const { return m_pszData; }
 
     virtual void OnSetString(char *pszData, int nLength);
+    friend CMyString operator+(const char *pszParam, const CMyString &strParam);
 
     int SetString(const char* pszParam);
     const char* GetString() const;

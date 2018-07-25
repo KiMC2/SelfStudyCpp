@@ -74,6 +74,14 @@ void CMyString::OnSetString(char *pszData, int nLength)
     // 아무런 코드가 추가되지 않는다. (하지만 언젠가..)
 }
 
+CMyString operator+(const char *pszParam, const CMyString &strParam)
+{
+    CMyString strResult(pszParam);
+    strResult.Append(strParam.m_pszData);
+
+    return strResult;
+}
+
 const char* CMyString::GetString() const
 {
     return m_pszData;

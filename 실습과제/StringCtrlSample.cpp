@@ -5,9 +5,9 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    CMyStringEx strTest;
-    strTest.SetString("멍멍이아들");
-    cout << strTest << endl;
+    CMyString b("World"), c;
+    c = "Hello" + b;
+    cout << c << endl;
 
     return 0;
 }
